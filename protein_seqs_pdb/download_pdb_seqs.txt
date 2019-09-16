@@ -1,0 +1,5 @@
+Downloaded from rcsb.org/pdb/static.do?p=download/http/index.html#sequencedata
+ 
+or use this link 
+ 
+ftp://ftp.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt

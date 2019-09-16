@@ -1,0 +1,1 @@
+makeblastdb -in pdb_seqres.txt -out pdb_seqres -dbtype prot

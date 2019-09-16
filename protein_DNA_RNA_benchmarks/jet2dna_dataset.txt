@@ -1,0 +1,198 @@
+1a3q	AB	A	CD			regulatory	transcription_factor	
+1a73	AB	A	CDEF	1a73_BA	1evx_AB	enzyme	nuclease	
+1b3t	AB	A	CD	1b3t_BA	1vhi_AB	regulatory	other	
+1bdt	ABCD	A	EF	1bdt_CD	1myk_AB	regulatory	gene	
+1bl0	A	A	BC			regulatory	transcription_factor	
+1cez	A	A	NT			enzyme	polymerase	
+1d02	AB	A	CD			enzyme	nuclease	
+1dc1	AB	A	CW			enzyme	nuclease	
+1dfm	AB	A	CD			enzyme	nuclease	
+1egw	AB	A	EF			regulatory	transcription_factor	
+1emh	A	A	BC	1emh_A	3fci_A	enzyme	glycosylase	
+1esg	AB	A	CD			enzyme	nuclease	
+1f4k	AB	A	DE	1f4k_BA	2dqr_AB	regulatory	replication	
+1fiu	ABCD	A	EFGHIJKL			enzyme	nuclease	
+1gu4	AB	A	CD			regulatory	transcription_factor	
+1gxp	AB	A	CD	1gxp_B	1gxq_A	regulatory	other	
+1h6f	AB	A	CD			regulatory	transcription_factor	
+1hlv	A	A	BC			structural	other/centromere	
+1i3j	A	A	BC			enzyme	nuclease	
+1iaw	AB	A	CDEF	1iaw_BA	1ev7_AB	enzyme	hydrolase	
+1j3e	A	A	BC			regulatory	replication	
+1je8	AB	A	CD	1je8_B	1a04_A	regulatory	transcription_factor	
+1jko	C	C	AB			enzyme	recombinase	
+1jx4	A	A	PT	1jx4_A	2rdi_A	enzyme	polymerase	
+1k3x	A	A	BC	1k3x_A	1q39_A	enzyme	nuclease	
+1k4t	A	A	BCD			enzyme	isomerase	
+1ku7	A	A	BC	1ku7_A	1ku3_A	regulatory	transcription_factor	
+1kx5	ABCDEFGH	B	IJ			structural	histone	
+		D						
+		A						
+		C						
+1l3l	BD	B	EG			regulatory	transcription_factor	
+1lmb	34	3	12			regulatory	other	
+1lq1	CD	C	EF			regulatory	transcription_factor	
+1mjo	ABCD	A	FG	1mjo_AB	1mjl_AB	regulatory	transcription_factor	
+1mnn	A	A	BC	1mnn_A	1mn4_A	regulatory	transcription_factor	
+1nkp	AB	B	FG			regulatory	transcription_factor	
+		A						
+1oe4	AB	A	EF			enzyme	glycosylase	
+1orn	A	A	BC			enzyme	nuclease	
+1oup	B	B	CD	1oup_B	1ouo_A	enzyme	nuclease	
+1owf	AB	A	CDE			regulatory	transcription_factor	
+		B						
+1ozj	A	A	CD			regulatory	transcription_factor	
+1pp7	U	U	EF			regulatory	transcription_factor	
+1pt3	A	A	CDEFGH	1pt3_A	3zfk_A	enzyme	nuclease	
+1qna	A	A	CD	1qna_A	1vok_A	regulatory	transcription_factor	
+1r71	AB	A	EFIJ			regulatory	transcription_factor	
+1rh6	B	B	CD			regulatory	recombination	
+1rxw	A	A	BC			enzyme	nuclease	
+1sa3	A	A	CD			enzyme	nuclease	
+1skn	P	P	AB			regulatory	transcription_factor	
+1sx5	AB	A	CDEF	1sx5_AB	1az3_AB	enzyme	nuclease	
+1sxq	A	A	CE	1sxq_A	1jg7_A	enzyme	transferase	
+1t7p	A	A	PT			enzyme	polymerase	B no contacts
+1t9i	AB	A	CD	1t9i_AB	2o7m_AB	enzyme	nuclease	
+1tc3	C	C	AB			enzyme	other	
+1tez	A	A	IJK	1tez_A	1owl_A	enzyme	lyase	
+1u8b	A	A	BCDE			regulatory	other	
+1uut	A	A	C	1uut_A	1m55_A	enzyme	nuclease	
+1wb9	AB	A	EF			regulatory	repair	
+1xyi	A	A	BC			structural	chromosomal	
+1yf3	A	A	CD	1yf3_A	1q0s_A	enzyme	methyl	
+1yo5	C	C	AB			regulatory	transcription_factor	
+1zme	CD	C	AB			regulatory	transcription_factor	
+1zrf	AB	A	WXYZ	1zrf_AB	4r8h_AB	regulatory	other	
+2aor	A	A	CD			enzyme	methyl	
+2aq4	A	A	PT			enzyme	transferase	
+2bnw	ABCD	A	EFGH	2bnw_CD	1irq_AB	regulatory	other	
+2dp6	A	A	CD	2dp6_A	2d3y_A	enzyme	glycosylase	
+2.00E+052	AB	A	EG			enzyme	nuclease	
+2ex5	AB	A	XY			enzyme	nuclease	
+2fkc	A	A	CD	2fkc_A	1ynm_A	enzyme	nuclease	
+2g1p	A	A	FG	2g1p_A	4gom_D	enzyme	methyl	
+2gb7	AB	A	EF			enzyme	nuclease	
+2h27	A	A	BC			enzyme	transferase	
+2h7g	X	X	YZ			enzyme	isomerase	
+2i06	A	A	BC			regulatory	replication	
+2ih2	A	A	BC	2ih2_A	1aqj_B	enzyme	methyl	
+2ihm	A	A	DPT			enzyme	polymerase	
+2is6	A	A	CD	2is6_A	3lfu_A	enzyme	helicase	
+2isz	AB	A	EF	2isz_BA	2isy_AB	regulatory	transcription_factor	
+				2isz_B	1b1b_A			
+2noh	A	A	BC	2noh_A	5an4_A	enzyme	glycosylase	
+2nq9	A	A	BCD	2nq9_A	1qtw_A	enzyme	nuclease	
+2o4a	A	A	BC			regulatory	transcription_factor	
+2ofi	A	A	BC	2ofi_A	2ofk_A	enzyme	glycosylase	
+2pi0	B	B	EF	2pi0_B	3qu6_A	regulatory	other	
+2pyj	A	A	XY	2pyj_A	1xhx_A	enzyme	polymerase	
+2qhb	B	B	CD	2qhb_B	2ckx_A	structural	telomere	
+2qoj	Z	Z	XY			enzyme	nuclease	
+2r1j	LR	L	AB			regulatory	transcription_factor	
+2r9l	A	A	CD	2r9l_A	2iru_A	enzyme	polymerase	
+2rbf	AB	A	CD	2rbf_BA	2gpe_AB	regulatory	other	
+2ve9	ABC	A	IJ	2ve9_A	2ve8_A	structural	other	
+2vla	A	A	LM			enzyme	nuclease	
+2vs7	A	A	BC	2vs7_A	1b24_A	enzyme	nuclease	
+2w42	A	A	PQ	2w42_A	1w9h_A	regulatory	other	
+2w7n	AB	A	EFGH	2w7n_BA	5ckt_AD	regulatory	gene	
+2xm3	CD	C	KLMN			enzyme	other/transposase	
+2xrz	A	A	CD	2xrz_A	2xry_A	enzyme	lyase	
+2xzf	A	A	BC			enzyme	glycosylase	
+2yvh	AB	A	EFGH	2yvh_AB	2yve_AB	regulatory	transcription_factor	
+3aaf	A	A	CD			enzyme	other	
+3bep	AB	A	CD	3bep_BA	4k3l_AB	enzyme	polymerase	
+3bm3	AB	A	CD			enzyme	nuclease	
+3bs1	A	A	BC	3bs1_A	4g4k_A	regulatory	gene	
+3c0w	A	A	BCD			enzyme	nuclease	
+3c25	AB	A	CD	3c25_AB	3bvq_AB	enzyme	nuclease	
+3coq	AB	A	DE			regulatory	transcription_factor	
+3cw7	ABCD	A	EFGH	3cw7_B	1mpg_A	enzyme	glycosylase	
+3dsd	AB	A	C	3dsd_BA	1ii7_AB	regulatory	repair	
+3dvo	AB	A	EF			enzyme	nuclease	
+3eeo	A	A	CD	3eeo_A	1hmy_A	enzyme	methyl	
+3f2b	A	A	PT			enzyme	polymerase	
+3fde	A	A	DE	3fde_A	2zkg_A	enzyme	ligase	
+3fdq	AB	A	CD			regulatory	other	
+3g00	A	A	HI	3g00_A	3g8v_A	enzyme	nuclease	
+3g0q	A	A	BC			enzyme	hydrolase	
+3g9m	AB	A	CD			regulatory	transcription_factor	
+3gox	AB	A	CD			enzyme	nuclease	
+3gxq	AB	A	CD			regulatory	other	
+3h0d	AB	A	CD			regulatory	transcription_factor	
+3i0w	A	A	BC	3i0w_A	3f10_A	enzyme	glycosylase	
+3iag	C	C	AB			regulatory	transcription_factor	
+3iay	A	A	PT			enzyme	polymerase	
+3igm	AB	A	CDWX			regulatory	transcription_factor	
+3ikt	AB	A	CD	3ikt_AB	3ikv_AB	regulatory	other	
+3jso	AB	A	CD	3jso_AB	1jhf_AB	regulatory	other	
+3jxy	A	A	BC	3jxy_A	3bvs_A	enzyme	glycosylase	
+3k59	A	A	PT	3k59_A	3k5o_A	enzyme	polymerase	
+3kde	C	C	AB			enzyme	other	
+3kxt	A	A	BC			structural	other	
+3l2c	A	A	BC			regulatory	transcription_factor	
+3lap	ABCDEF	A	GHIJKL			regulatory	other	
+3m4a	A	A	DE	3m4a_A	2f4q_A	enzyme	isomerase	
+3mfi	A	A	PT	3mfi_A	1jih_A	enzyme	polymerase	
+3mln	AB	A	CD			regulatory	transcription_factor	
+3mva	O	O	DE			regulatory	transcription_factor	
+3mx4	AH	A	KL			enzyme	nuclease	
+3o1t	A	A	BC	3o1t_A	4jht_A	enzyme	other	
+3o9x	AB	A	EF	3o9x_AB	3gn5_AB	regulatory	gene	
+3od8	A	A	IJ			enzyme	other	
+3pov	A	A	CD	3pov_A	3fhd_A	enzyme	other	
+3pvi	AB	A	CD	3pvi_AB	1k0z_AB	enzyme	nuclease	
+3pvv	A	A	CD			regulatory	replication	
+3qex	A	A	PT	3qex_A	3cfo_A	enzyme	polymerase	
+3qmd	A	A	BC			regulatory	other	
+3qqy	A	A	BC			enzyme	nuclease	
+3qws	AB	A	CN	3qws_AB	2hin_AB	regulatory	other	
+3rkq	A	A	CD			regulatory	transcription_factor	
+3rmp	AC	A	EFGH			enzyme	other	
+3s57	A	A	BC			enzyme	other	
+3s8q	AB	A	CD	3s8q_BA	4i6r_AB	regulatory	other	
+3sjm	A	A	CD			structural	telomere	
+3sm4	ABC	A	DE	3sm4_CAB	1avq_ABC	enzyme	nuclease	
+3spd	A	A	EF	3spd_A	3sp4_A	enzyme	hydrolase	
+3ssc	A	A	CD			enzyme	nuclease	
+3tan	A	A	BC			enzyme	polymerase	
+3tq6	A	A	CD			regulatory	transcription_factor	
+3u2b	C	C	AB			regulatory	transcription_factor	
+3vk8	A	A	CD	3vk8_A	3a42_A	enzyme	glycosylase	
+3vw3	LH	L	AB			other	antibody	
+		H						
+3vxv	A	A	BC			enzyme	hydrolase	
+3zvk	FG	E	XY			regulatory	other	
+3zvn	A	A	EFGHI	3zvn_A	3zvl_A	enzyme	hydrolase	
+4aij	AB	A	CD	4aij_BA	4aih_AB	regulatory	transcription_factor	
+4dih	H	H	D	4dih_H	3nxp_A	enzyme	thrombin	L no contacts
+4e9f	A	A	CD	4e9f_A	4e9e_A	enzyme	Hydrolase/glycosylase	
+4ecq	A	A	PT			enzyme	polymerase	
+4esj	A	A	CD			enzyme	nuclease	
+4fzx	C	C	AB			enzyme	nuclease	
+4g92	ABC	B	DE	4g92_ABC	4g91_ABC	regulatory	transcription_factor	
+		C						
+		A						
+4gck	AB	A	WZ	4gck_AB	4gfl_AB	other	other	
+4gjr	AB	A	GHIJ			regulatory	transcription_factor	
+4glx	A	A	BCD	4glx_A	5tt5_A	enzyme	ligase	
+4gzn	C	C	AB			regulatory	transcription_factor	
+4h0e	B	B	TU			regulatory	transcription_factor	
+4h10	AB	B	CD			regulatory	transcription_factor	
+		A						
+4hf1	AB	A	CD	4hf1_AB	4hf0_AB	regulatory	transcription_factor	
+4hqe	AB	A	CD	4hqe_BA	4hqm_AB	regulatory	transcription_factor	
+4htu	A	A	CD	4htu_A	1zbf_A	enzyme	nuclease	
+4i2o	AB	A	XW			regulatory	other	
+4ix7	AB	A	CD			regulatory	other	
+4j3n	AB	A	CDEF			enzyme	isomerase	
+4jbm	A	A	RT			regulatory	other	
+4jcy	AB	A	CD	4jcy_BA	3lis_AB	regulatory	other	
+4k98	A	A	DE	4k98_A	4k8v_C	enzyme	transferase	
+4kb1	A	A	C			enzyme	hydrolase	
+4kli	A	A	DPT			enzyme	polymerase	
+4kpy	A	A	CDN			NoClass	NoClass	
+4qtj	A	A	BC			regulatory	transcription_factor	
+4rkh	CEF	C	AB			enzyme	ligase	
+6pax	A	A	BC			regulatory	transcription_factor	
