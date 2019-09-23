@@ -115,5 +115,5 @@ if __name__ == "__main__":
             possible_decays.append(coin)
     for decoy in possible_decays:
         str_out = f"{decoy['pdb1']} {decoy['pdb2']}"
-        str_out += f"{decoy['seqid']} {decoy['RMSD']}"
+        str_out += f" {decoy['seqid']} {decoy['RMSD']}"
         print(str_out)
