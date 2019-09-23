@@ -16,7 +16,8 @@ similarity measure TM-score or RMSD
 check if structures are disimular from each other
 
 **Options**
-|     |         |                        |
+
+|  Short   | Long  |  Description        |
 |:---:|:-------:|:----------------------:|
 | -i  | --input | Path to the input file |
 | -t  | --tm_path | Path to tmalign program |
