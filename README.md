@@ -8,11 +8,22 @@ Protein-DNA
 Protein-RNA
 should have both unbound and bound conformations (to account for conformational changes)
 
-## to add #
-within identical/similar sequences different structures to create decoys
-clustering with sequence/structure similarity metrics
+## read blast output
+reads blast output 
 
-similarity measure TM-score or RMSD
+**Options**
+
+|  Short   | Long  |  Description        |
+|:---:|:-------:|:----------------------:|
+| -i  | --input_file | Path to the input file |
+| -o  | --out_file | Path to output file |
+| -s  | --seqid | Sequence identaty cutoff |
+| -h  | --help | Prints help |
+
+**Example**
+``` bash
+python3 read_blast_output.py -i ../protein_DNA_RNA_benchmarks/test_set1_results.txt -o ../protein_DNA_RNA_benchmarks/test_set.txt -s 80 
+```
 
 ## get decoys
 check if structures are disimular from each other
@@ -32,3 +43,26 @@ check if structures are disimular from each other
 ``` bash
 python3 get_decoys.py -i ../protein_DNA_RNA_benchmarks/test_set1_results -t ~/prog/TMalign -d ~/PDB/ -s 100 -r 1.0
 ```
+
+## download clean PDB
+download and cleans pdbfiles
+
+**Options**
+
+|  Short   | Long  |  Description        |
+|:---:|:-------:|:----------------------:|
+| -i  | --input | Path to the Blast output file |
+| -d  | --pdb_dir | Directory to PDB files (PDB files need to be preprocessed)  |
+| -s  | --seqid | Sequence identaty cutoff |
+| -h  | --help | Prints help |
+
+**Example**
+``` bash
+python3 download_clean_pdb.py -i ../protein_DNA_RNA_benchmarks/test_set1_results -d ~\PDB -s 100
+```
+
+## to add #
+within identical/similar sequences different structures to create decoys
+clustering with sequence/structure similarity metrics
+
+similarity measure TM-score or RMSD

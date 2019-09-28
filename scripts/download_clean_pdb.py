@@ -1,43 +1,51 @@
-import pathlib as pl
+import gzip
 import os
 import re
 import urllib.request
-import gzip
+from optparse import OptionParser, OptionValueError
+from pathlib import Path
+
 
 """
 Read blast output to find sequences at a threshold
-
 """
+def _check_inputFile(option, opt_str, value, parser):
+    f_path = Path(value)
+    if not f_path.is_file():
+        raise OptionValueError(f"Cannot get {str(f_path)} file")
+    setattr(parser.values, option.dest, Path(f_path))
+    parser.values.saved_infile = True
 
-main_dir = pl.Path('/home/saveliy/create_training_set')
-in_file = "./test_set1_results.txt"
-protein_dir = main_dir / 'protein_DNA_RNA_benchmarks'
-pdb_dir = main_dir / 'PDB'
-pdb_lst = []
+
+def _check_inputDir(option, opt_str, value, parser):
+    f_path = Path(value)
+    if not f_path.is_dir():
+        raise OptionValueError(f"Cannot get {str(f_path)} file")
+    setattr(parser.values, option.dest, Path(f_path))
+    parser.values.saved_infile = True
 
 
-def download_pdb(in_file: str, threshold: float):
+def download_pdb(in_file: Path, threshold: float, pdb_dir: Path):
     """
         read the blast output and download pdbid
-
     """
-    blast_output = protein_dir / in_file
-
-    with open(blast_output) as infile:
-        for line in infile:
+    pdb_lst = []
+    with open(in_file) as oF:
+        for line in oF:
+            line = line.strip()
+            if len(line) < 1:
+                continue
+            if line.startswith("Search "):  # skipping CONVERGED lines
+                continue
             # to skip blank lines and the line stating search has CONVERGED #
-            if not line.startswith('Search has CONVERGED') and line.strip():
-                line = line.strip('\n')
-                line_str = line.split()
-                seqid = float(line_str[2])
-                if seqid == threshold:
-                    if line_str[0] not in pdb_lst:
-                        pdb_lst.append(line_str[0])
-                    if line_str[1] not in pdb_lst:
-                        pdb_lst.append(line_str[1])
+            pdb1, pdb2, seqid, *rest = line.split()
+            if float(seqid) >= threshold:
+                pdb_lst.append(pdb1)
+                pdb_lst.append(pdb2)
 
-    print(pdb_lst)
+    print(f"Will dowload {len(pdb_lst)} files")
     for i in pdb_lst:
+        print(f"Getting {i}")
         pdbid, chainid = i.split("_")
         file_name = pdbid + ".pdb"
         file_path = pdb_dir / file_name
@@ -48,15 +56,13 @@ def download_pdb(in_file: str, threshold: float):
                     data = uncompressed.read()
                     out_file.write(data)
 
-        clean_pdb(chainid, pdbid)
+        clean_pdb(chainid, pdbid, pdb_dir)
 
 
-def clean_pdb(chainid: str, pdbid: str):
+def clean_pdb(chainid: str, pdbid: str, pdb_dir: Path):
     """
-
     clean the pdb file to have only ATOM records and specific chain, 
     with TER at the end
-
     """
     file_out = pdbid + "_" + chainid + ".pdb"
     file_in = pdbid + ".pdb"
@@ -72,5 +78,27 @@ def clean_pdb(chainid: str, pdbid: str):
         pdbfhout.write("TER\n")
 
 
-# set threshold for decoys #
-download_pdb(str(in_file), 100)
+if __name__ == "__main__":
+    options_parser = OptionParser()
+    options_parser.add_option("-i", "--input",
+                              dest="input_file", type='str',
+                              help="input FILE",
+                              metavar="FILE",
+                              action='callback',
+                              callback=_check_inputFile)
+    options_parser.add_option("-d", "--pdb_dir",
+                              dest="pdb_dir", type='str',
+                              help="path to PDB DIR",
+                              metavar="DIR",
+                              action='callback',
+                              callback=_check_inputDir)
+    options_parser.add_option("-s", "--seqid",
+                              dest="seqcut", type='float',
+                              help="sequence id cutoff",
+                              metavar="FLOAT")
+    (options, args) = options_parser.parse_args()
+    # print(options.__dict__)
+    inFile = Path(options.input_file)
+    pdb_dir = Path(options.pdb_dir)
+    cutoff = float(options.seqcut)
+    download_pdb(inFile, cutoff, pdb_dir)
