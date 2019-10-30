@@ -36,33 +36,39 @@ def similarity_score(protein1,protein2,protein3,protein4):
     (prot1,prot3) = sorted([protein1,protein3])
     if prot1 == prot3:
         score1 = 1.00 # when A is compared with A
-        #print(prot1,prot3)
-    elif prot1 in uni_to_uni_compare and prot3 in uni_to_uni_compare[prot1]:
-        score1 = float(uni_to_uni_compare[prot1][prot3]['seqid'])
+    else:
+        if prot1 in uni_to_uni_compare and prot3 in uni_to_uni_compare[prot1]:
+            score1 = float(uni_to_uni_compare[prot1][prot3]['seqid'])
 
     (prot1, prot4) = sorted([protein1, protein4])
     if prot1 == prot4:
         score2 = 1.00
-    elif prot1 in uni_to_uni_compare and prot4 in uni_to_uni_compare[prot1]:
-        score2 = float(uni_to_uni_compare[prot1][prot4]['seqid'])
+    else: 
+        if prot1 in uni_to_uni_compare and prot4 in uni_to_uni_compare[prot1]:
+            score2 = float(uni_to_uni_compare[prot1][prot4]['seqid'])
 
-    max_score1 = max(score1,score2)
+    sum1 = score1 + score2
 
     (prot2, prot3) = sorted([protein2, protein3])
     if prot2 == prot3:
         score3 = 1.00
-    elif prot2 in uni_to_uni_compare and prot3 in uni_to_uni_compare[prot2]:
-        score3 = float(uni_to_uni_compare[prot2][prot3]['seqid'])
+    else:
+        if prot2 in uni_to_uni_compare and prot3 in uni_to_uni_compare[prot2]:
+            score3 = float(uni_to_uni_compare[prot2][prot3]['seqid'])
 
     (prot2, prot4) = sorted([protein2, protein4])
     if prot2 == prot4:
         score4 = 1.00
-    elif prot2 in uni_to_uni_compare and prot4 in uni_to_uni_compare[prot2]:
-        score4 = float(uni_to_uni_compare[prot2][prot4]['seqid'])
+    else:
+        if prot2 in uni_to_uni_compare and prot4 in uni_to_uni_compare[prot2]:
+            score4 = float(uni_to_uni_compare[prot2][prot4]['seqid'])
 
-    max_score2 = max(score3,score4)
+    sum2  = score3 + score4
+    
+    
+    max_sum = max(sum1,sum2)
 
-    seqid = round((max_score1+max_score1)/2,2)
+    seqid = round((max_sum)/2,2)
 
     return(seqid)
 
