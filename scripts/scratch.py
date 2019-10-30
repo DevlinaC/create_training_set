@@ -45,11 +45,11 @@ def similarity_score(protein1,protein2,protein3,protein4):
 
     (prot2, prot3) = sorted([protein2, protein3])
     if prot2 in uni_to_uni_compare and prot3 in uni_to_uni_compare[prot2]:
-        score3 = uni_to_uni_compare[protein2][protein3]['seqid']
+        score3 = uni_to_uni_compare[prot2][prot3]['seqid']
 
     (prot2, prot4) = sorted([protein2, protein4])
     if prot2 in uni_to_uni_compare and prot4 in uni_to_uni_compare[prot2]:
-        score4 = uni_to_uni_compare[protein2][protein4]['seqid']
+        score4 = uni_to_uni_compare[prot2][prot4]['seqid']
 
     max_score2 = max(score3,score4)
 
