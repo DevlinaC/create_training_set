@@ -80,7 +80,7 @@ print(f"Total cluster {len(L)}")
 def build_distance_matrix(data: pd.DataFrame, cutoff):
     def dist(x):
         if x > cutoff:
-            return(1/x)
+            return(1/x) # use simpliest method
         else:
             return (0)
    # data_out = np.matrix(data.values)
@@ -100,9 +100,11 @@ def getAffinityMatrix(data, cutoff=0.3):
     dists = build_distance_matrix(data,cutoff)
 
     # for each row, sort the distances ascending order and take the index of the
-    # k-th position (nearest neighbour)
+    # k-th position (nearest neighbour) u need some k-nearest cutoff see FIG 2 and Formula 2 from the paper atop
+    # they say this K is dependenf on the sort of data and dimention you have so u need to play with it
+    # this K is needed to calculate local Scaling 
     knn_distances = np.sort(dists, axis=0)
-    knn_distances = knn_distances[np.newaxis].T
+    knn_distances = knn_distances[np.newaxis].T 
 
     # calculate sigma_i * sigma_j
     local_scale = knn_distances.dot(knn_distances.T)
