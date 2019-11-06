@@ -80,10 +80,10 @@ print(f"Total cluster {len(L)}")
 def build_distance_matrix(data: pd.DataFrame, cutoff):
     def dist(x):
         if x > cutoff:
-            return(x)
+            return(1/x)
         else:
             return (0)
-    data_out = np.matrix(data.values)
+   # data_out = np.matrix(data.values)
     data_out = np.vectorize(dist)(data.values)
     np.fill_diagonal(data_out, 0)
     return data_out
