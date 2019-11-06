@@ -77,21 +77,31 @@ print(f"Total cluster {len(L)}")
 """
 
 
-def getAffinityMatrix(coordinates, k=7):
-    """
-    Calculate affinity matrix based on input coordinates matrix and the numeber
-    of nearest neighbours.
+def build_distance_matrix(data: pd.DataFrame, cutoff):
+    def dist(x):
+        if x > cutoff:
+            return(x)
+        else:
+            return (0)
+    data_out = np.matrix(data.values)
+    data_out = np.vectorize(dist)(data.values)
+    np.fill_diagonal(data_out, 0)
+    return data_out
 
-    Apply local scaling based on the k nearest neighbour
+def getAffinityMatrix(data, cutoff=0.3):
+    """
+    Calculate affinity matrix based on input similarity matrix and cutoff
+
+    Apply local scaling based on the nearest neighbours based on the threshold/cutoff
         References:
     https://papers.nips.cc/paper/2619-self-tuning-spectral-clustering.pdf
     """
-    # calculate euclidian distance matrix
-    dists = squareform(pdist(coordinates))
+    # calculate distance matrix
+    dists = build_distance_matrix(data,cutoff)
 
-    # for each row, sort the distances ascendingly and take the index of the
+    # for each row, sort the distances ascending order and take the index of the
     # k-th position (nearest neighbour)
-    knn_distances = np.sort(dists, axis=0)[k]
+    knn_distances = np.sort(dists, axis=0)
     knn_distances = knn_distances[np.newaxis].T
 
     # calculate sigma_i * sigma_j
@@ -106,10 +116,9 @@ def getAffinityMatrix(coordinates, k=7):
     np.fill_diagonal(affinity_matrix, 0)
     return affinity_matrix
 
-#affinity_matrix = getAffinityMatrix(data, k = 7)
 
 
-def eigenDecomposition(A, plot=True, topK=5):
+def eigenDecomposition(A, plot=True, topK=2):
     """
     :param A: Affinity matrix
     :param plot: plots the sorted eigen values for visual inspection
@@ -148,8 +157,8 @@ def eigenDecomposition(A, plot=True, topK=5):
 
     return nb_clusters, eigenvalues, eigenvectors
 
-affinity_matrix = getAffinityMatrix(data, k = 5)
-k, eigenvalues,eigenvectors = eigenDecomposition(affinity_matrix)
-print(f'Optimal number of clusters {k}')
+affinity_matrix = getAffinityMatrix(data, cutoff=0.3)
+nb_clusters, eigenvalues,eigenvectors = eigenDecomposition(affinity_matrix)
+print(f'Optimal number of clusters {nb_clusters}')
 
 plt.show()
