@@ -30,7 +30,7 @@ def read_chain_from_gunzip_file(tarFilePath: Path, chain):
         return False
     chain_list = []
     with gzip.open(str(tarFilePath), 'rt') as f:
-        for line in itts.islice(f.readlines(), 0, 800):
+        for line in itts.islice(f.readlines(), 0, None):
             line = line.strip()
             if _line_to_skip(line):
                 continue
