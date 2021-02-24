@@ -81,7 +81,7 @@ def read_alignment_file(inputFile2) -> dict:
 inputFile1 = working_dir / input_file1
 complex_list = read_complex_file(inputFile1)
 """
-U dont need to do this part 
+Don't need to do this part 
 # A0AVT1,O15205 | A0AVT1,P0CG48 #
 dict_complex_pairs = {}  # list we need #
 for i, protein1 in enumerate(lst_complexes_sorted):
