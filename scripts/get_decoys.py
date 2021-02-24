@@ -1,3 +1,6 @@
+"""
+Find decoys
+"""
 import re
 from optparse import OptionParser, OptionValueError
 from pathlib import Path
